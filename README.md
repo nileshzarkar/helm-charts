@@ -215,9 +215,6 @@ git push
 https://nileshzarkar.github.io/helm-charts/
 
 # List Helm Repo
-
-PS D:\Experiments\helm-experiments\helm-experiments\helm-charts> helm repo remove helm-chart
-
 helm repo list
 
 # Add Helm Repo
@@ -226,11 +223,12 @@ D:\Experiments\helm-experiments\helm-experiments\helm-charts>helm repo add helm-
 # List Helm Repo
 helm repo list
 # Helm Search Repo
-PS D:\Experiments\helm-experiments\helm-experiments\helm-charts> helm search repo htmlrepo/htmlpage
+PS D:\Experiments\helm-experiments\helm-experiments\helm-charts> helm search repo helm-repo/htmlpage
 NAME                    CHART VERSION   APP VERSION     DESCRIPTION
-htmlrepo/htmlpage       4.0.0           4.0.0           A Helm chart for Kubernetes
+helm-repo/htmlpage      1.0.0           1.0.0           A Helm chart for Kubernetes
+
 # Helm Search Repo with --versions
-PS D:\Experiments\helm-experiments\helm-experiments\helm-charts> helm search repo htmlrepo/htmlpage --versions
+PS D:\Experiments\helm-experiments\helm-experiments\helm-charts> helm search repo helm-repo/htmlpage --versions
 NAME                    CHART VERSION   APP VERSION     DESCRIPTION
 htmlrepo/htmlpage       4.0.0           4.0.0           A Helm chart for Kubernetes
 htmlrepo/htmlpage       3.0.0           3.0.0           A Helm chart for Kubernetes

@@ -7,7 +7,7 @@ replicaCount: 1
 image:
   repository: nileshzarkar/htmlpage
   pullPolicy: Always
-  tag: "3.0.0"
+  tag: "4.0.0"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -45,7 +45,7 @@ service:
   nodePort: 30082
 
 config:
-  pageColor: "blue"
+  pageColor: "green"
 
 ingress:
   enabled: false

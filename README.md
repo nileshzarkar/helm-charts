@@ -227,13 +227,15 @@ PS D:\Experiments\helm-experiments\helm-experiments\helm-charts> helm search rep
 NAME                    CHART VERSION   APP VERSION     DESCRIPTION
 helm-repo/htmlpage      1.0.0           1.0.0           A Helm chart for Kubernetes
 
+D:\Experiments\helm-experiments\helm-experiments\helm-charts>helm repo update helm-repo
+
 # Helm Search Repo with --versions
 PS D:\Experiments\helm-experiments\helm-experiments\helm-charts> helm search repo helm-repo/htmlpage --versions
 NAME                    CHART VERSION   APP VERSION     DESCRIPTION
-htmlrepo/htmlpage       4.0.0           4.0.0           A Helm chart for Kubernetes
-htmlrepo/htmlpage       3.0.0           3.0.0           A Helm chart for Kubernetes
-htmlrepo/htmlpage       2.0.0           2.0.0           A Helm chart for Kubernetes
-htmlrepo/htmlpage       1.0.0           1.0.0           A Helm chart for Kubernetes
+helm-repo/htmlpage      4.0.0           4.0.0           A Helm chart for Kubernetes
+helm-repo/htmlpage      3.0.0           3.0.0           A Helm chart for Kubernetes
+helm-repo/htmlpage      2.0.0           2.0.0           A Helm chart for Kubernetes
+helm-repo/htmlpage      1.0.0           1.0.0           A Helm chart for Kubernetes
 ```
 
 
@@ -243,11 +245,11 @@ htmlrepo/htmlpage       1.0.0           1.0.0           A Helm chart for Kuberne
 ```t
 # Helm Install
 
-D:\Experiments\helm-experiments\helm-experiments\helm-charts>helm repo update htmlrepo
+D:\Experiments\helm-experiments\helm-experiments\helm-charts>helm repo update helm-repo
 
-D:\Experiments\helm-experiments\helm-experiments\helm-charts>helm install htmlpage htmlrepo/htmlpage --version 1.0.0 --atomic
+D:\Experiments\helm-experiments\helm-experiments\helm-charts>helm install htmlpage helm-repo/htmlpage --version 1.0.0 --atomic
 or
-D:\Experiments\helm-experiments\helm-experiments\helm-charts>helm install htmlpage htmlrepo/htmlpage --atomic
+D:\Experiments\helm-experiments\helm-experiments\helm-charts>helm install htmlpage helm-repo/htmlpage --atomic
 NAME: htmlpage
 LAST DEPLOYED: Sun Nov 10 12:14:47 2024
 NAMESPACE: default
@@ -263,10 +265,10 @@ NOTES:
 helm status htmlpage --show-resources
 
 
-helm install htmlpage htmlrepo/htmlpage --version 1.0.0 --atomic
-helm install htmlpage htmlrepo/htmlpage --version 2.0.0 --atomic
-helm install htmlpage htmlrepo/htmlpage --version 3.0.0 --atomic
-helm install htmlpage htmlrepo/htmlpage --version 4.0.0 --atomic
+helm install htmlpage helm-repo/htmlpage --version 1.0.0 --atomic
+helm install htmlpage helm-repo/htmlpage --version 2.0.0 --atomic
+helm install htmlpage helm-repo/htmlpage --version 3.0.0 --atomic
+helm install htmlpage helm-repo/htmlpage --version 4.0.0 --atomic
 
 # Access Application
 http://localhost:30082/page

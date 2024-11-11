@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   htmlpage:
   - apiVersion: v2
+    appVersion: 2.0.0
+    created: "2024-11-11T03:22:14.315062981Z"
+    description: A Helm chart for Kubernetes
+    digest: 77018eef0cc15d876ad750757e719a2a8fd2008abc875e55bd7a74fdfce33de8
+    name: htmlpage
+    type: application
+    urls:
+    - https://github.com/nileshzarkar/helm-charts/releases/download/htmlpage-2.0.0/htmlpage-2.0.0.tgz
+    version: 2.0.0
+  - apiVersion: v2
     appVersion: 1.0.0
     created: "2024-11-11T03:05:50.483405069Z"
     description: A Helm chart for Kubernetes
@@ -11,4 +21,4 @@ entries:
     urls:
     - https://github.com/nileshzarkar/helm-charts/releases/download/htmlpage-1.0.0/htmlpage-1.0.0.tgz
     version: 1.0.0
-generated: "2024-11-11T03:05:50.483426958Z"
+generated: "2024-11-11T03:22:14.315070725Z"

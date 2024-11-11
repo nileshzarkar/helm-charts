@@ -1,0 +1,29 @@
+name: Release Charts
+
+on:
+  push:
+    branches:
+      - main  # push the changes on main branch
+
+jobs:
+  release:
+    permissions:
+      contents: write  
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      # checkout the content
+
+      - name: Configure Git
+        run: |
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
+      - name: Run chart-releaser
+        uses: helm/chart-releaser-action@v1.5.0
+        env:
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+      # this chart releaser action will build the package and push it to github    

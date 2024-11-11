@@ -16,7 +16,7 @@
 - Click on **Create repository**
 
 
-
+  
 
 ## Step-03: Create gh-pages branch
 - **New branch name:** gh-pages
